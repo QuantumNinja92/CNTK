@@ -466,7 +466,7 @@ public:
 
         // initialize randomizer
         if (numframes > 0)
-            m_randomOrdering.resize(numframes, randomizationrange);
+            m_randomOrdering.Resize(numframes, randomizationrange);
     }
     virtual ~minibatchframesourcemulti()
     {
