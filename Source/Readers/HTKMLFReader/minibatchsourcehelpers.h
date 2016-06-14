@@ -189,16 +189,6 @@ static void augmentneighbors(const std::vector<std::vector<float>>& frames, cons
     }
 }
 
-// ---------------------------------------------------------------------------
-// randomordering -- class to help manage randomization of input data
-// ---------------------------------------------------------------------------
-
-static inline size_t rand(const size_t begin, const size_t end)
-{
-    const size_t randno = ::rand() * RAND_MAX + ::rand(); // BUGBUG: still only covers 32-bit range
-    return begin + randno % (end - begin);
-}
-
 // Using a smaller sized integer type to store the state ids saves a huge amount of space
 // We need more than 2 bytes (i.e. an unsigned int or bigger) to support untied context-dependent phones
 // TODO: This is currently being hardcoded to unsigned short for saving space, which means untied context-dependent phones
